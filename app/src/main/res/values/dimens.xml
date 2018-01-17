@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="height_image_number_field">200dp</dimen>
+    <dimen name="text_tm_margin_top">2dp</dimen>
+    <dimen name="team_text_size">20sp</dimen>
+    <dimen name="number_field_padding_top">30dp</dimen>
+    <dimen name="number_field_text_size">100sp</dimen>
+    <dimen name="button_touchdown_padding">15dp</dimen>
+    <dimen name="button_touchdown_text_size">14sp</dimen>
+    <dimen name="button_field_goal_margin_top">2dp</dimen>
+    <dimen name="button_field_goal_padding">15dp</dimen>
+    <dimen name="button_field_goal_text_size">14sp</dimen>
+    <dimen name="button_left_safety_margin_top">2dp</dimen>
+    <dimen name="button_left_safety_padding">15dp</dimen>
+    <dimen name="button_left_safety_text_size">14sp</dimen>
+    <dimen name="button_reset_text_size">14sp</dimen>
+    <dimen name="column_padding">18dp</dimen>
+</resources>

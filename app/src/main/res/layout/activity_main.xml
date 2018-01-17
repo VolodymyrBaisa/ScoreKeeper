@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/green_grass_background"
+    tools:context="com.volodymyrbaisa.scorekeeper.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/score_field"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/reset_field"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/left_column"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/column_padding">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|top">
+
+                <ImageView
+                    android:id="@+id/left_number_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_image_number_field"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/number_field" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_tm_margin_top"
+                    android:gravity="center"
+                    android:text="@string/team_a"
+                    android:textSize="@dimen/team_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/left_text_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLength="2"
+                    android:paddingTop="@dimen/number_field_padding_top"
+                    android:text="@string/number_field_zero_value"
+                    android:textSize="@dimen/number_field_text_size" />
+
+                <Button
+                    android:id="@+id/left_touchdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/left_field_goal"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="onClickTouchdownTeamA"
+                    android:padding="@dimen/button_touchdown_padding"
+                    android:text="@string/touchdown"
+                    android:textSize="@dimen/button_touchdown_text_size"
+                    android:theme="@style/AppTheme.Button" />
+
+                <Button
+                    android:id="@+id/left_field_goal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/left_safety"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/button_field_goal_margin_top"
+                    android:onClick="onClickFieldGoalTeamA"
+                    android:padding="@dimen/button_field_goal_padding"
+                    android:text="@string/field_goal"
+                    android:textSize="@dimen/button_field_goal_text_size"
+                    android:theme="@style/AppTheme.Button" />
+
+                <Button
+                    android:id="@+id/left_safety"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/button_left_safety_margin_top"
+                    android:onClick="onClickSafetyTeamA"
+                    android:padding="@dimen/button_left_safety_padding"
+                    android:text="@string/safety"
+                    android:textSize="@dimen/button_left_safety_text_size"
+                    android:theme="@style/AppTheme.Button" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/right_column"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/column_padding">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|top">
+
+                <ImageView
+                    android:id="@+id/right_number_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_image_number_field"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/number_field" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_tm_margin_top"
+                    android:gravity="center"
+                    android:text="@string/team_b"
+                    android:textSize="@dimen/team_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/right_text_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLength="2"
+                    android:paddingTop="@dimen/number_field_padding_top"
+                    android:text="@string/number_field_zero_value"
+                    android:textSize="@dimen/number_field_text_size" />
+
+                <Button
+                    android:id="@+id/right_touchdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/right_field_goal"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="onClickTouchdownTeamB"
+                    android:padding="@dimen/button_touchdown_padding"
+                    android:text="@string/touchdown"
+                    android:textSize="@dimen/button_touchdown_text_size"
+                    android:theme="@style/AppTheme.Button" />
+
+                <Button
+                    android:id="@+id/right_field_goal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/right_safety"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/button_field_goal_margin_top"
+                    android:onClick="onClickFieldGoalTeamB"
+                    android:padding="@dimen/button_field_goal_padding"
+                    android:text="@string/field_goal"
+                    android:textSize="@dimen/button_field_goal_text_size"
+                    android:theme="@style/AppTheme.Button" />
+
+                <Button
+                    android:id="@+id/right_safety"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/button_left_safety_margin_top"
+                    android:onClick="onClickSafetyTeamB"
+                    android:padding="@dimen/button_left_safety_padding"
+                    android:text="@string/safety"
+                    android:textSize="@dimen/button_left_safety_text_size"
+                    android:theme="@style/AppTheme.Button" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/reset_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="onClickReset"
+            android:text="@string/reset"
+            android:textSize="@dimen/button_reset_text_size"
+            android:theme="@style/AppTheme.Button" />
+    </LinearLayout>
+</RelativeLayout>
